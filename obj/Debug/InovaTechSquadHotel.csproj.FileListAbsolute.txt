@@ -1,0 +1,15 @@
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\bin\Debug\InovaTechSquadHotel.exe.config
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\bin\Debug\InovaTechSquadHotel.exe
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\bin\Debug\InovaTechSquadHotel.pdb
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.csproj.AssemblyReference.cache
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.csproj.SuggestedBindingRedirects.cache
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.Properties.Resources.resources
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.Login.resources
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.Telas.TelaCadastrarHospede.resources
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.Telas.TelaCadastroFuncionario.resources
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.Telas.TelaPrincipal.resources
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.Telas.TelaReserva.resources
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.csproj.GenerateResource.cache
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.exe
+C:\Users\Gabriel P Silva\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.pdb

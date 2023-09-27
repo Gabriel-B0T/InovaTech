@@ -19,8 +19,6 @@ namespace InovaTechSquadHotel.Classes
         public string Cargo { get; set; }
         public bool Ativo { get; set; }
 
-
-
         #endregion
 
         #region Construtores
@@ -123,8 +121,8 @@ namespace InovaTechSquadHotel.Classes
                         Email = cn.dr[3].ToString(),
                         Senha = cn.dr[4].ToString(),
                         Telefone = cn.dr[5].ToString(),
-                        Cargo = cn.dr[5].ToString(),
-                        Ativo = Convert.ToBoolean(cn.dr[6]),
+                        Cargo = cn.dr[6].ToString(),
+                        Ativo = Convert.ToBoolean(cn.dr[7]),
                     });
                 }
                 return funcionarios;
@@ -137,7 +135,7 @@ namespace InovaTechSquadHotel.Classes
         }      
         public void CadastrarFuncionario(List<Funcionario> funcionarios)
         {
-            string query = string.Format($"INSERT INTO Hospede (Nome,CPF,Email,Senha,Telefone,Cargo,Ativo) VALUES ('{Nome}','{CPF}','{Email}','{Senha}','{Telefone}','{Cargo}',1)");
+            string query = string.Format($"INSERT INTO Funcionario (Nome,CPF,Email,Senha,Telefone,Cargo,Ativo) VALUES ('{Nome}','{CPF}','{Email}','{Crypto.Sha256("1")}','{Telefone}','{Cargo}',1)");
             query += "; SELECT SCOPE_IDENTITY()";
             ConexaoSQL cn = new ConexaoSQL(query);
 
