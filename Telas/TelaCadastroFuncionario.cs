@@ -79,7 +79,7 @@ namespace InovaTechSquadHotel.Telas
 
             DgvRegistro.Rows.Clear();
 
-            foreach (Funcionario funcionario in (funcionarios == null ? _funcionarios : funcionarios))
+            foreach (Funcionario funcionario in funcionarios ?? _funcionarios)
             {
                 DgvRegistro.Rows.Add(funcionario.Id, funcionario.Nome, funcionario.CPF, funcionario.Email, funcionario.Telefone, funcionario.Cargo, funcionario.Ativo);
             }

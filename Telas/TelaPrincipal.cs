@@ -23,8 +23,6 @@ namespace InovaTechSquadHotel.Telas
 
         private void TelaPrincipal_Load(object sender, EventArgs e)
         {
-            Funcionario funcionario = new Funcionario();
-
            if (_userLogado != null)
             {
                 TslUsuarioLogado.Text = _userLogado.Nome;
