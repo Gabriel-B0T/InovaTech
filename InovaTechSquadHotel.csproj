@@ -52,6 +52,7 @@
     <Compile Include="Classes\Hospede.cs" />
     <Compile Include="Classes\Quarto.cs" />
     <Compile Include="Classes\Reserva.cs" />
+    <Compile Include="Classes\TipoQuarto.cs" />
     <Compile Include="Telas\Login.cs">
       <SubType>Form</SubType>
     </Compile>

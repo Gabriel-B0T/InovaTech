@@ -11,6 +11,8 @@ namespace InovaTechSquadHotel.Classes
         #region Propriedades
 
         public int Id { get; set; }
+        public int FuncionarioId { get; set; }
+        public int HospedeId { get; set; }
         public DateTime Checkin { get; set; }
         public DateTime Checkout { get; set; }
         public DateTime DtInicioReserva { get; set; }
@@ -19,6 +21,7 @@ namespace InovaTechSquadHotel.Classes
         public string Avaliacao { get; set; }
         public decimal ValorTotal { get; set; }
         public DateTime DtReserva { get; set; }
+        public List<Quarto> Quartos { get; set; }
         #endregion
 
         #region Construtores

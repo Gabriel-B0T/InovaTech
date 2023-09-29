@@ -76,13 +76,13 @@
             // 
             this.LblInfoCadF.AutoSize = true;
             this.LblInfoCadF.BackColor = System.Drawing.Color.Black;
-            this.LblInfoCadF.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblInfoCadF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblInfoCadF.ForeColor = System.Drawing.Color.White;
             this.LblInfoCadF.Location = new System.Drawing.Point(504, 0);
             this.LblInfoCadF.Name = "LblInfoCadF";
-            this.LblInfoCadF.Size = new System.Drawing.Size(239, 19);
+            this.LblInfoCadF.Size = new System.Drawing.Size(206, 20);
             this.LblInfoCadF.TabIndex = 13;
-            this.LblInfoCadF.Text = "Cadastro de funcionario";
+            this.LblInfoCadF.Text = "Cadastro de Funcionário";
             // 
             // groupBox1
             // 
@@ -115,10 +115,10 @@
             this.CbxAtivo.AutoSize = true;
             this.CbxAtivo.Checked = true;
             this.CbxAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CbxAtivo.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbxAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbxAtivo.Location = new System.Drawing.Point(769, 19);
             this.CbxAtivo.Name = "CbxAtivo";
-            this.CbxAtivo.Size = new System.Drawing.Size(89, 27);
+            this.CbxAtivo.Size = new System.Drawing.Size(75, 28);
             this.CbxAtivo.TabIndex = 23;
             this.CbxAtivo.Text = "Ativo";
             this.CbxAtivo.UseVisualStyleBackColor = true;
@@ -126,10 +126,10 @@
             // LblCargo
             // 
             this.LblCargo.AutoSize = true;
-            this.LblCargo.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCargo.Location = new System.Drawing.Point(12, 123);
             this.LblCargo.Name = "LblCargo";
-            this.LblCargo.Size = new System.Drawing.Size(82, 23);
+            this.LblCargo.Size = new System.Drawing.Size(72, 24);
             this.LblCargo.TabIndex = 22;
             this.LblCargo.Text = "Cargo:";
             // 
@@ -142,7 +142,7 @@
             // 
             // BtnFechar
             // 
-            this.BtnFechar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFechar.Location = new System.Drawing.Point(742, 237);
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(112, 24);
@@ -153,8 +153,8 @@
             // 
             // BtnNovo
             // 
-            this.BtnNovo.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNovo.Location = new System.Drawing.Point(557, 236);
+            this.BtnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNovo.Location = new System.Drawing.Point(563, 237);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(112, 24);
             this.BtnNovo.TabIndex = 19;
@@ -164,8 +164,8 @@
             // 
             // BtnExcluir
             // 
-            this.BtnExcluir.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExcluir.Location = new System.Drawing.Point(387, 236);
+            this.BtnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExcluir.Location = new System.Drawing.Point(382, 236);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(112, 24);
             this.BtnExcluir.TabIndex = 18;
@@ -175,8 +175,8 @@
             // 
             // BtnAlterar
             // 
-            this.BtnAlterar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAlterar.Location = new System.Drawing.Point(190, 236);
+            this.BtnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAlterar.Location = new System.Drawing.Point(196, 236);
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(112, 24);
             this.BtnAlterar.TabIndex = 17;
@@ -192,10 +192,10 @@
             // 
             // BtnCadastrar
             // 
-            this.BtnCadastrar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCadastrar.Location = new System.Drawing.Point(27, 237);
+            this.BtnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCadastrar.Location = new System.Drawing.Point(27, 236);
             this.BtnCadastrar.Name = "BtnCadastrar";
-            this.BtnCadastrar.Size = new System.Drawing.Size(112, 23);
+            this.BtnCadastrar.Size = new System.Drawing.Size(112, 24);
             this.BtnCadastrar.TabIndex = 15;
             this.BtnCadastrar.Text = "Cadastrar";
             this.BtnCadastrar.UseVisualStyleBackColor = true;
@@ -204,7 +204,7 @@
             // LblId
             // 
             this.LblId.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.LblId.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblId.Location = new System.Drawing.Point(16, 19);
             this.LblId.Name = "LblId";
             this.LblId.Size = new System.Drawing.Size(132, 23);
@@ -228,20 +228,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(527, 89);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 23);
+            this.label4.Size = new System.Drawing.Size(56, 24);
             this.label4.TabIndex = 5;
             this.label4.Text = "CPF:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 23);
+            this.label3.Size = new System.Drawing.Size(99, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Telefone:";
             // 
@@ -255,20 +255,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(527, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 23);
+            this.label2.Size = new System.Drawing.Size(75, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "E-mail:";
             // 
             // LblNome
             // 
             this.LblNome.AutoSize = true;
-            this.LblNome.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNome.Location = new System.Drawing.Point(12, 51);
             this.LblNome.Name = "LblNome";
-            this.LblNome.Size = new System.Drawing.Size(178, 23);
+            this.LblNome.Size = new System.Drawing.Size(164, 24);
             this.LblNome.TabIndex = 0;
             this.LblNome.Text = "Nome completo:";
             // 

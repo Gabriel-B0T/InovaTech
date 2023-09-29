@@ -11,9 +11,13 @@ namespace InovaTechSquadHotel.Classes
         #region Propriedades
 
         public int Id { get; set; }
+        public int TipoQuartoId { get; set; }
+
         public int NumQuarto { get; set; }
         public int NumAndar { get; set; }
         public decimal ValorDiaria { get; set; }
+        public  List <Hospede> Hospedes { get; set; }
+        public List <TipoQuarto> TipoQuartos { get; set; }
         #endregion
 
         #region Construtores

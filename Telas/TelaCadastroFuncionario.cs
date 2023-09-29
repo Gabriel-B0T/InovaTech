@@ -177,5 +177,7 @@ namespace InovaTechSquadHotel.Telas
         {
             Close();
         }
+
+
     }
 }
