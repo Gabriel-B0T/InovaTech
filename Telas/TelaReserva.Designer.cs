@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnAdicionar = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -37,7 +38,6 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DgvRegistroQuarto = new System.Windows.Forms.DataGridView();
-            this.BtnAdicionar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -46,6 +46,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.BtnAdicionar);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label1);
@@ -55,9 +57,18 @@
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1880, 295);
+            this.groupBox1.Size = new System.Drawing.Size(1187, 295);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // BtnAdicionar
+            // 
+            this.BtnAdicionar.Location = new System.Drawing.Point(1017, 83);
+            this.BtnAdicionar.Name = "BtnAdicionar";
+            this.BtnAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.BtnAdicionar.TabIndex = 7;
+            this.BtnAdicionar.Text = "Adicionar";
+            this.BtnAdicionar.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
@@ -70,7 +81,7 @@
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1014, 10);
+            this.label1.Location = new System.Drawing.Point(1017, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 26);
             this.label1.TabIndex = 5;
@@ -89,7 +100,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(546, 16);
+            this.label6.Location = new System.Drawing.Point(545, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(166, 20);
             this.label6.TabIndex = 3;
@@ -99,7 +110,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(129, 16);
+            this.label5.Location = new System.Drawing.Point(128, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 20);
             this.label5.TabIndex = 2;
@@ -116,11 +127,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 665);
+            this.dataGridView1.Location = new System.Drawing.Point(629, 313);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1904, 376);
+            this.dataGridView1.Size = new System.Drawing.Size(570, 319);
             this.dataGridView1.TabIndex = 1;
             // 
             // DgvRegistroQuarto
@@ -128,31 +141,23 @@
             this.DgvRegistroQuarto.AllowUserToAddRows = false;
             this.DgvRegistroQuarto.AllowUserToDeleteRows = false;
             this.DgvRegistroQuarto.AllowUserToResizeRows = false;
+            this.DgvRegistroQuarto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.DgvRegistroQuarto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvRegistroQuarto.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.DgvRegistroQuarto.Location = new System.Drawing.Point(0, 313);
+            this.DgvRegistroQuarto.Location = new System.Drawing.Point(12, 313);
             this.DgvRegistroQuarto.MultiSelect = false;
             this.DgvRegistroQuarto.Name = "DgvRegistroQuarto";
             this.DgvRegistroQuarto.ReadOnly = true;
             this.DgvRegistroQuarto.RowHeadersVisible = false;
             this.DgvRegistroQuarto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvRegistroQuarto.Size = new System.Drawing.Size(1904, 352);
+            this.DgvRegistroQuarto.Size = new System.Drawing.Size(611, 319);
             this.DgvRegistroQuarto.TabIndex = 2;
-            // 
-            // BtnAdicionar
-            // 
-            this.BtnAdicionar.Location = new System.Drawing.Point(1014, 113);
-            this.BtnAdicionar.Name = "BtnAdicionar";
-            this.BtnAdicionar.Size = new System.Drawing.Size(75, 23);
-            this.BtnAdicionar.TabIndex = 7;
-            this.BtnAdicionar.Text = "Adicionar";
-            this.BtnAdicionar.UseVisualStyleBackColor = true;
             // 
             // TelaReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.ClientSize = new System.Drawing.Size(1218, 652);
             this.Controls.Add(this.DgvRegistroQuarto);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);

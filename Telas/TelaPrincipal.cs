@@ -41,9 +41,7 @@ namespace InovaTechSquadHotel.Telas
                 {
                     TslCargoLogado.Text = "Sem cargo";
                 }
-            }
-            
-            
+            }                     
         }
 
         private void BtnCliente_Click(object sender, EventArgs e)
@@ -51,8 +49,7 @@ namespace InovaTechSquadHotel.Telas
             TelaCadastrarHospede tlCadastrarHospede = new TelaCadastrarHospede(_userLogado);
             this.Hide();
             tlCadastrarHospede.ShowDialog();
-            this.Show();
-           
+            this.Show();          
         }
 
         private void TrmRelogio_Tick(object sender, EventArgs e)
@@ -60,10 +57,6 @@ namespace InovaTechSquadHotel.Telas
             this.TslDataHora.Text = DateTime.Now.ToString("F");
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void BtnFuncionario_Click(object sender, EventArgs e)
         {
@@ -78,6 +71,19 @@ namespace InovaTechSquadHotel.Telas
             TelaReserva tlReserva = new TelaReserva(_userLogado);
             this.Hide();
             tlReserva.ShowDialog();
+            this.Show();
+        }
+
+        private void BtnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnQuarto_Click(object sender, EventArgs e)
+        {
+            TelaQuarto tlQuartos = new TelaQuarto(_userLogado);
+            this.Hide();
+            tlQuartos.ShowDialog();
             this.Show();
         }
     }

@@ -40,7 +40,7 @@ namespace InovaTechSquadHotel.Classes
         #endregion
 
         #region Metodos
-        public void BuscarTipoQuarto(List<TipoQuarto> tipoQuartos)
+        public void CadastrarTipoQuarto(List<TipoQuarto> tipoQuartos)
         {
             string query = string.Format($"INSERT INTO TipoQuartos (Capacidade,Descricao,Ativo,QtdCamaSimples,QtdCamaDupla) VALUES ('{Capacidade}','{Descricao}','{TipoQuartos}','{Ativo}','{QtdCamaSimples}','{QtdCamaDupla})");
             query += "; SELECT SCOPE_IDENTITY()";
@@ -60,12 +60,7 @@ namespace InovaTechSquadHotel.Classes
             {
                 cn.FecharConexao();
             }
-
-
-
-
-            #endregion
-
         }
+        #endregion
     }
 }

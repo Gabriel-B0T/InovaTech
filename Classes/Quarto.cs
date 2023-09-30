@@ -12,12 +12,11 @@ namespace InovaTechSquadHotel.Classes
 
         public int Id { get; set; }
         public int TipoQuartoId { get; set; }
-
+        public TipoQuarto TipoQuarto { get; set; }
         public int NumQuarto { get; set; }
         public int NumAndar { get; set; }
         public decimal ValorDiaria { get; set; }
-        public  List <Hospede> Hospedes { get; set; }
-        public List <TipoQuarto> TipoQuartos { get; set; }
+        public List<Hospede> Hospedes { get; set; }
         #endregion
 
         #region Construtores
@@ -25,9 +24,10 @@ namespace InovaTechSquadHotel.Classes
         public Quarto()
         {
         }
-        public Quarto(int id, int numQuarto, int numAndar, decimal valorDiaria)
+        public Quarto(int id, int tipoQuarto, int numQuarto, int numAndar, decimal valorDiaria)
         {
             Id = id;
+            TipoQuartoId = tipoQuarto;
             NumQuarto = numQuarto;
             NumAndar = numAndar;
             ValorDiaria = valorDiaria;
@@ -37,7 +37,7 @@ namespace InovaTechSquadHotel.Classes
         #region Métodos
         public void CadastrarQuarto(List<Quarto> quartos)
         {
-            string query = string.Format($"INSERT INTO Quarto (NumQuarto,NumAndar,ValorDiaria) VALUES ('{NumQuarto}','{NumAndar}','{ValorDiaria}')");
+            string query = string.Format($"INSERT INTO Quarto (TipoQuartoId,NumQuarto,NumAndar,ValorDiaria) VALUES ('{TipoQuartoId}','{NumQuarto}','{NumAndar}','{ValorDiaria}')");
             query += "; SELECT SCOPE_IDENTITY()";
             ConexaoSQL cn = new ConexaoSQL(query);
 
@@ -55,11 +55,11 @@ namespace InovaTechSquadHotel.Classes
             {
                 cn.FecharConexao();
             }
-           
+
         }
         public static List<Quarto> BuscarQuartos()
         {
-            string query = string.Format($"SELECT * FROM Quartos");
+            string query = string.Format($"SELECT * FROM Quarto");
             ConexaoSQL cn = new ConexaoSQL(query);
 
             List<Quarto> quartos = new List<Quarto>();
@@ -83,6 +83,27 @@ namespace InovaTechSquadHotel.Classes
             catch (Exception)
             {
                 throw;
+            }
+        }
+        public void ExcluirQuarto()
+        {
+            string query = string.Format($"DELETE FROM Quarto WHERE Id = {Id}");
+            ConexaoSQL cn = new ConexaoSQL(query);
+
+            try
+            {
+                cn.AbriConexao();
+                cn.comando.ExecuteNonQuery();
+              
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
             }
         }
         #endregion

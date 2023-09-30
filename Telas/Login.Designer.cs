@@ -61,6 +61,7 @@
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.Size = new System.Drawing.Size(265, 29);
             this.TxtSenha.TabIndex = 6;
+            this.TxtSenha.Text = "1";
             // 
             // TxtEmail
             // 
@@ -68,6 +69,7 @@
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(265, 29);
             this.TxtEmail.TabIndex = 5;
+            this.TxtEmail.Text = "gabriel";
             // 
             // LblSenha
             // 

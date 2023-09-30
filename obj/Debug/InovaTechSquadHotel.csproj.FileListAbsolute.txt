@@ -43,3 +43,4 @@ C:\Users\nicholas.asilva2\source\repos\obj\Debug\InovaTechSquadHotel.csproj.Gene
 C:\Users\nicholas.asilva2\source\repos\obj\Debug\InovaTechSquadHotel.csproj.CoreCompileInputs.cache
 C:\Users\nicholas.asilva2\source\repos\obj\Debug\InovaTechSquadHotel.exe
 C:\Users\nicholas.asilva2\source\repos\obj\Debug\InovaTechSquadHotel.pdb
+C:\Users\gabriel.pires3\source\repos\InovaTechSquadHotel\obj\Debug\InovaTechSquadHotel.Telas.TelaQuarto.resources

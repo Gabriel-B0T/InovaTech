@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnQuarto = new System.Windows.Forms.Button();
             this.BtnSobre = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.BtnSair = new System.Windows.Forms.Button();
             this.BtnReserva = new System.Windows.Forms.Button();
             this.BtnFuncionario = new System.Windows.Forms.Button();
             this.BtnCliente = new System.Windows.Forms.Button();
@@ -57,8 +58,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.CausesValidation = false;
+            this.panel1.Controls.Add(this.BtnQuarto);
             this.panel1.Controls.Add(this.BtnSobre);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.BtnSair);
             this.panel1.Controls.Add(this.BtnReserva);
             this.panel1.Controls.Add(this.BtnFuncionario);
             this.panel1.Controls.Add(this.BtnCliente);
@@ -70,67 +72,93 @@
             this.panel1.Size = new System.Drawing.Size(279, 1041);
             this.panel1.TabIndex = 0;
             // 
+            // BtnQuarto
+            // 
+            this.BtnQuarto.BackColor = System.Drawing.Color.Transparent;
+            this.BtnQuarto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnQuarto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnQuarto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnQuarto.FlatAppearance.BorderSize = 0;
+            this.BtnQuarto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.BtnQuarto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnQuarto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnQuarto.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.BtnQuarto.Image = ((System.Drawing.Image)(resources.GetObject("BtnQuarto.Image")));
+            this.BtnQuarto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnQuarto.Location = new System.Drawing.Point(0, 721);
+            this.BtnQuarto.Name = "BtnQuarto";
+            this.BtnQuarto.Size = new System.Drawing.Size(279, 88);
+            this.BtnQuarto.TabIndex = 9;
+            this.BtnQuarto.Text = "Quarto";
+            this.BtnQuarto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnQuarto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnQuarto.UseVisualStyleBackColor = false;
+            this.BtnQuarto.Click += new System.EventHandler(this.BtnQuarto_Click);
+            // 
             // BtnSobre
             // 
             this.BtnSobre.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSobre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnSobre.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnSobre.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnSobre.FlatAppearance.BorderSize = 0;
             this.BtnSobre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.BtnSobre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSobre.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSobre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSobre.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.BtnSobre.Image = ((System.Drawing.Image)(resources.GetObject("BtnSobre.Image")));
             this.BtnSobre.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnSobre.Location = new System.Drawing.Point(0, 685);
+            this.BtnSobre.Location = new System.Drawing.Point(0, 635);
             this.BtnSobre.Name = "BtnSobre";
-            this.BtnSobre.Size = new System.Drawing.Size(279, 137);
+            this.BtnSobre.Size = new System.Drawing.Size(279, 86);
             this.BtnSobre.TabIndex = 8;
             this.BtnSobre.Text = "Sobre";
             this.BtnSobre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSobre.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnSobre.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // BtnSair
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 904);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(279, 137);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Sair";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.BtnSair.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSair.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BtnSair.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnSair.FlatAppearance.BorderSize = 0;
+            this.BtnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.BtnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSair.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.BtnSair.Image = ((System.Drawing.Image)(resources.GetObject("BtnSair.Image")));
+            this.BtnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSair.Location = new System.Drawing.Point(0, 904);
+            this.BtnSair.Name = "BtnSair";
+            this.BtnSair.Size = new System.Drawing.Size(279, 137);
+            this.BtnSair.TabIndex = 7;
+            this.BtnSair.Text = "Sair";
+            this.BtnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnSair.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnSair.UseVisualStyleBackColor = false;
+            this.BtnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // BtnReserva
             // 
             this.BtnReserva.BackColor = System.Drawing.Color.Transparent;
+            this.BtnReserva.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnReserva.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnReserva.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnReserva.FlatAppearance.BorderSize = 0;
             this.BtnReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.BtnReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnReserva.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnReserva.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.BtnReserva.Image = ((System.Drawing.Image)(resources.GetObject("BtnReserva.Image")));
             this.BtnReserva.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnReserva.Location = new System.Drawing.Point(0, 548);
             this.BtnReserva.Name = "BtnReserva";
-            this.BtnReserva.Size = new System.Drawing.Size(279, 137);
+            this.BtnReserva.Size = new System.Drawing.Size(279, 87);
             this.BtnReserva.TabIndex = 5;
             this.BtnReserva.Text = "Reserva";
             this.BtnReserva.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,13 +169,14 @@
             // BtnFuncionario
             // 
             this.BtnFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.BtnFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnFuncionario.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnFuncionario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnFuncionario.FlatAppearance.BorderSize = 0;
             this.BtnFuncionario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.BtnFuncionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFuncionario.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFuncionario.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.BtnFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncionario.Image")));
             this.BtnFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,13 +193,14 @@
             // BtnCliente
             // 
             this.BtnCliente.BackColor = System.Drawing.Color.Transparent;
+            this.BtnCliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnCliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnCliente.FlatAppearance.BorderSize = 0;
             this.BtnCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.BtnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCliente.Font = new System.Drawing.Font("Unispace", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCliente.ForeColor = System.Drawing.Color.DarkGoldenrod;
             this.BtnCliente.Image = ((System.Drawing.Image)(resources.GetObject("BtnCliente.Image")));
             this.BtnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -298,7 +328,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtnSair;
         private System.Windows.Forms.Button BtnReserva;
         private System.Windows.Forms.Button BtnFuncionario;
         private System.Windows.Forms.Button BtnCliente;
@@ -312,5 +342,6 @@
         private System.Windows.Forms.ToolStripStatusLabel TslCargoLogado;
         private System.Windows.Forms.ToolStripStatusLabel TslDataHora;
         private System.Windows.Forms.Timer TrmRelogio;
+        private System.Windows.Forms.Button BtnQuarto;
     }
 }
