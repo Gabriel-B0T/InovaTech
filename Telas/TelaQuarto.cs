@@ -139,5 +139,57 @@ namespace InovaTechSquadHotel.Telas
                 throw;
             }
         }
+
+        private void DgvRegistro_SelectionChanged(object sender, EventArgs e)
+        {
+            if (DgvRegistro.Rows.Count < 1 || DgvRegistro.SelectedRows.Count < 1)
+                return;
+
+            try
+            {
+                _quartoSelecionado = _quartos.Find(a => a.Id == (int)DgvRegistro.SelectedRows[0].Cells[0].Value);
+                LblIdQuarto.Text = _quartoSelecionado.Id.ToString();
+                TxtNquarto.Text = _quartoSelecionado.NumAndar.ToString();
+                TxtNAndar.Text = _quartoSelecionado.NumAndar.ToString();
+                TxtValorDiaria.Text = _quartoSelecionado.ValorDiaria.ToString();                
+
+                BtnCadastrar.Enabled = false;
+                BtnAlterar.Enabled = true;
+                BtnExcluir.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnNovo_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void BtnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _quartoSelecionado.NumQuarto = Convert.ToInt32(TxtNquarto.Text);
+                _quartoSelecionado.NumAndar = Convert.ToInt32(TxtNAndar.Text);
+                _quartoSelecionado.ValorDiaria = Convert.ToInt32(TxtValorDiaria.Text);
+
+
+                _quartoSelecionado.AlterarQuarto();
+                CarregarDgv();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

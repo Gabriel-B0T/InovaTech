@@ -61,6 +61,79 @@ namespace InovaTechSquadHotel.Classes
                 cn.FecharConexao();
             }
         }
+        public static List<TipoQuarto> BuscarTipoQuarto()
+        {
+            string query = string.Format($"SELECT * FROM TipoQuarto");
+            ConexaoSQL cn = new ConexaoSQL(query);
+
+            List<TipoQuarto> tipoQuartos = new List<TipoQuarto>();
+
+            try
+            {
+                cn.AbriConexao();
+                cn.dr = cn.comando.ExecuteReader();
+
+                while (cn.dr.Read())
+                {
+                    tipoQuartos.Add(new TipoQuarto()
+                    {
+                        Id = Convert.ToInt32(cn.dr[0]),
+                        Capacidade = Convert.ToInt32(cn.dr[1]),
+                        Descricao = cn.dr[2].ToString(),
+                        Ativo = Convert.ToBoolean(cn.dr[3]),
+                        QtdCamaSimples = Convert.ToInt32(cn.dr[4]),
+                        QtdCamaDupla = Convert.ToInt32(cn.dr[5]),
+                    });
+                }
+                return tipoQuartos;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public void ExcluirTipoQuarto()
+        {
+            string query = string.Format($"DELETE FROM TipoQuarto WHERE Id = {Id}");
+            ConexaoSQL cn = new ConexaoSQL(query);
+
+            try
+            {
+                cn.AbriConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+        }
+        public void AlterarTipoQuarto()
+        {
+            string query = string.Format($"UPDATE TipoQuarto SET Capacidade = '{Capacidade}',Descricao = '{Descricao}',Ativo = '{Ativo}',QdtCamaSimples = '{QtdCamaSimples}',QtdCamaDupla = '{QtdCamaDupla}'");
+            ConexaoSQL cn = new ConexaoSQL(query);
+
+            try
+            {
+                cn.AbriConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+        }
+
+        
         #endregion
     }
 }

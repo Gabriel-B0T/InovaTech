@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CbxTipoQuarto = new System.Windows.Forms.ComboBox();
             this.LblIdQuarto = new System.Windows.Forms.Label();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnAlterar = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.TxtNAndar = new System.Windows.Forms.TextBox();
             this.TxtNquarto = new System.Windows.Forms.TextBox();
             this.DgvRegistro = new System.Windows.Forms.DataGridView();
-            this.CbxTipoQuarto = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // CbxTipoQuarto
+            // 
+            this.CbxTipoQuarto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxTipoQuarto.FormattingEnabled = true;
+            this.CbxTipoQuarto.Location = new System.Drawing.Point(408, 101);
+            this.CbxTipoQuarto.Name = "CbxTipoQuarto";
+            this.CbxTipoQuarto.Size = new System.Drawing.Size(121, 21);
+            this.CbxTipoQuarto.TabIndex = 12;
+            // 
             // LblIdQuarto
             // 
             this.LblIdQuarto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -85,6 +94,7 @@
             this.BtnNovo.TabIndex = 10;
             this.BtnNovo.Text = "Novo";
             this.BtnNovo.UseVisualStyleBackColor = true;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
             // BtnAlterar
             // 
@@ -94,6 +104,7 @@
             this.BtnAlterar.TabIndex = 9;
             this.BtnAlterar.Text = "Alterar";
             this.BtnAlterar.UseVisualStyleBackColor = true;
+            this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
             // 
             // BtnExcluir
             // 
@@ -113,6 +124,7 @@
             this.BtnFechar.TabIndex = 7;
             this.BtnFechar.Text = "Fechar";
             this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // BtnCadastrar
             // 
@@ -189,15 +201,7 @@
             this.DgvRegistro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvRegistro.Size = new System.Drawing.Size(559, 219);
             this.DgvRegistro.TabIndex = 7;
-            // 
-            // CbxTipoQuarto
-            // 
-            this.CbxTipoQuarto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxTipoQuarto.FormattingEnabled = true;
-            this.CbxTipoQuarto.Location = new System.Drawing.Point(408, 101);
-            this.CbxTipoQuarto.Name = "CbxTipoQuarto";
-            this.CbxTipoQuarto.Size = new System.Drawing.Size(121, 21);
-            this.CbxTipoQuarto.TabIndex = 12;
+            this.DgvRegistro.SelectionChanged += new System.EventHandler(this.DgvRegistro_SelectionChanged);
             // 
             // TelaQuarto
             // 

@@ -81,10 +81,18 @@ namespace InovaTechSquadHotel.Telas
 
         private void BtnQuarto_Click(object sender, EventArgs e)
         {
+            TelaTipoQuarto tlTipoQuarto = new TelaTipoQuarto(_userLogado);
+            this.Hide();
+            tlTipoQuarto.ShowDialog();
+            this.Show();
+
             TelaQuarto tlQuartos = new TelaQuarto(_userLogado);
             this.Hide();
             tlQuartos.ShowDialog();
             this.Show();
+
+            
         }
+
     }
 }

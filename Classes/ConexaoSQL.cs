@@ -13,7 +13,8 @@ namespace InovaTechSquadHotel.Classes
         #region Variáveis
 
         //String de conexão                                                         Informações Chumbadas - HardCode
-        private static readonly string _strConexao = @"Data Source = VPR0687139W10-1; Initial Catalog = Hotel; Integrated Security = True";
+        //private static readonly string _strConexao = @"Data Source = VPR0687139W10-1; Initial Catalog = Hotel; Integrated Security = True";
+        private static string _strConexao = @"Data Source = localhost\SQLEXPRESS; Initial Catalog = Hotel; Integrated Security = True";
 
         // Variáveis de uso (podem ou não serem usadas ao decorrrer do projeto)
         public SqlConnection conexao = new SqlConnection(_strConexao);

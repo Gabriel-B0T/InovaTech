@@ -106,6 +106,25 @@ namespace InovaTechSquadHotel.Classes
                 cn.FecharConexao();
             }
         }
+        public void AlterarQuarto()
+        {
+            string query = string.Format($"UPDATE Quarto SET NumQuarto = '{NumQuarto}', NumAndar = '{NumAndar}', ValorDiaria = '{ValorDiaria}'");
+            ConexaoSQL cn = new ConexaoSQL(query);
+
+            try
+            {
+                cn.AbriConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+        }
         #endregion
     }
 }

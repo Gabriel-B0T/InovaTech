@@ -38,7 +38,6 @@ namespace InovaTechSquadHotel.Telas
             DgvRegistro.Columns.Add("Nome", "Nome");
             DgvRegistro.Columns.Add("CPF", "CPF");
             DgvRegistro.Columns.Add("Email", "E-mail");
-            DgvRegistro.Columns.Add("Senha", "Senha");
             DgvRegistro.Columns.Add("Telefone", "Telefone");
             DgvRegistro.Columns.Add("Cargo", "Cargo");
             DgvRegistro.Columns.Add("Ativo", "Ativo");
@@ -49,7 +48,6 @@ namespace InovaTechSquadHotel.Telas
             DgvRegistro.Columns["Nome"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["CPF"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["Email"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            DgvRegistro.Columns["Senha"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["Telefone"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["Cargo"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["Ativo"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -60,7 +58,6 @@ namespace InovaTechSquadHotel.Telas
             DgvRegistro.Columns["Nome"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DgvRegistro.Columns["CPF"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             DgvRegistro.Columns["Email"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            DgvRegistro.Columns["Senha"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DgvRegistro.Columns["Telefone"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             DgvRegistro.Columns["Cargo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DgvRegistro.Columns["Ativo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -178,6 +175,25 @@ namespace InovaTechSquadHotel.Telas
             Close();
         }
 
+        private void BtnAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                _funcionarioSelecionado.Nome = TxtNome.Text;
+                _funcionarioSelecionado.CPF = TxtCPF.Text;
+                _funcionarioSelecionado.Email = TxtEmail.Text;
+                _funcionarioSelecionado.Telefone = TxtTelefone.Text;
+                _funcionarioSelecionado.Cargo = TxtCargo.Text;
+                _funcionarioSelecionado.Ativo = CbxAtivo.Checked;
 
+                _funcionarioSelecionado.AlterarFuncionario();
+                CarregarDgv();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
