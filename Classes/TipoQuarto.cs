@@ -42,7 +42,7 @@ namespace InovaTechSquadHotel.Classes
         #region Metodos
         public void CadastrarTipoQuarto(List<TipoQuarto> tipoQuartos)
         {
-            string query = string.Format($"INSERT INTO TipoQuartos (Capacidade,Descricao,Ativo,QtdCamaSimples,QtdCamaDupla) VALUES ('{Capacidade}','{Descricao}','{TipoQuartos}','{Ativo}','{QtdCamaSimples}','{QtdCamaDupla})");
+            string query = string.Format($"INSERT INTO TipoQuarto (Capacidade,Descricao,TipoQuarto,Ativo,QdtCamaSimples,QdtCamaDupla) VALUES ('{Capacidade}','{Descricao}','{TipoQuartos}','{Ativo}','{QtdCamaSimples}','{QtdCamaDupla}')");
             query += "; SELECT SCOPE_IDENTITY()";
             ConexaoSQL cn = new ConexaoSQL(query);
 
@@ -80,9 +80,10 @@ namespace InovaTechSquadHotel.Classes
                         Id = Convert.ToInt32(cn.dr[0]),
                         Capacidade = Convert.ToInt32(cn.dr[1]),
                         Descricao = cn.dr[2].ToString(),
-                        Ativo = Convert.ToBoolean(cn.dr[3]),
-                        QtdCamaSimples = Convert.ToInt32(cn.dr[4]),
-                        QtdCamaDupla = Convert.ToInt32(cn.dr[5]),
+                        TipoQuartos = cn.dr[3].ToString(),
+                        Ativo = Convert.ToBoolean(cn.dr[4]),
+                        QtdCamaSimples = Convert.ToInt32(cn.dr[5]),
+                        QtdCamaDupla = Convert.ToInt32(cn.dr[6]),
                     });
                 }
                 return tipoQuartos;

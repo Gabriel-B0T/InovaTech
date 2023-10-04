@@ -36,6 +36,7 @@ namespace InovaTechSquadHotel.Telas
             DgvRegistro.Columns.Add("Id", "Numero de registro");
             DgvRegistro.Columns.Add("Capacidade", "Capacidade");
             DgvRegistro.Columns.Add("Descricao", "Descrição");
+            DgvRegistro.Columns.Add("TipoQuarto", "Tipo de quarto");
             DgvRegistro.Columns.Add("Ativo", "Ativo");
             DgvRegistro.Columns.Add("QdtCamaSimples", "Quantidade de cama simples");
             DgvRegistro.Columns.Add("QtdCamaDupla", "Quantidade de cama dupla");
@@ -45,6 +46,7 @@ namespace InovaTechSquadHotel.Telas
             DgvRegistro.Columns["Id"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["Capacidade"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["Descricao"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DgvRegistro.Columns["TipoQuarto"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["Ativo"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["QdtCamaSimples"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             DgvRegistro.Columns["QtdCamaDupla"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -55,6 +57,7 @@ namespace InovaTechSquadHotel.Telas
             DgvRegistro.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             DgvRegistro.Columns["Capacidade"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             DgvRegistro.Columns["Descricao"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            DgvRegistro.Columns["TipoQuarto"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DgvRegistro.Columns["Ativo"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             DgvRegistro.Columns["QdtCamaSimples"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             DgvRegistro.Columns["QtdCamaDupla"].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -76,7 +79,7 @@ namespace InovaTechSquadHotel.Telas
 
             foreach (TipoQuarto tipoQuarto in tipoQuartos ?? _tipoQuartos)
             {
-                DgvRegistro.Rows.Add(tipoQuarto.Id, tipoQuarto.Capacidade, tipoQuarto.Descricao, tipoQuarto.Ativo, tipoQuarto.QtdCamaSimples, tipoQuarto.QtdCamaDupla);
+                DgvRegistro.Rows.Add(tipoQuarto.Id, tipoQuarto.Capacidade, tipoQuarto.Descricao, tipoQuarto.TipoQuartos,tipoQuarto.Ativo, tipoQuarto.QtdCamaSimples, tipoQuarto.QtdCamaDupla);
             }
         }
         private void LimparCampos()
@@ -96,10 +99,18 @@ namespace InovaTechSquadHotel.Telas
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
-            TipoQuarto tipoQuarto = new TipoQuarto();
-            tipoQuarto.CadastrarTipoQuarto(_tipoQuartos);
-            CarregarDgv();
-            LimparCampos();
+            try
+            {
+                TipoQuarto tipoQuarto = new TipoQuarto(0, Convert.ToInt32(TxtCapacidade.Text), TxtDescricao.Text, TxtTipoQuarto.Text, true, Convert.ToInt32(TxtQdtCamaSimples.Text), Convert.ToInt32(TxtQtdCamaDupla.Text));
+                tipoQuarto.CadastrarTipoQuarto(_tipoQuartos);
+                CarregarDgv();
+                LimparCampos();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void TelaTipoQuarto_Load(object sender, EventArgs e)
