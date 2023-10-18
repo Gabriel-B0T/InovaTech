@@ -15,7 +15,7 @@ namespace InovaTechSquadHotel.Classes
         public string TipoQuartos { get; set; }
         public bool Ativo { get; set; }
         public int QtdCamaSimples { get; set; }
-        public int QtdCamaDupla { get; set; }
+        public int QdtCamaDupla { get; set; }
 
 
         #endregion
@@ -34,7 +34,7 @@ namespace InovaTechSquadHotel.Classes
             TipoQuartos = tipoQuartos;
             Ativo = ativo;
             QtdCamaSimples = qtdCamaSimples;
-            QtdCamaDupla = qtdCamaDupla;
+            QdtCamaDupla = qtdCamaDupla;
         }
 
         #endregion
@@ -42,7 +42,7 @@ namespace InovaTechSquadHotel.Classes
         #region Metodos
         public void CadastrarTipoQuarto(List<TipoQuarto> tipoQuartos)
         {
-            string query = string.Format($"INSERT INTO TipoQuarto (Capacidade,Descricao,TipoQuarto,Ativo,QdtCamaSimples,QdtCamaDupla) VALUES ('{Capacidade}','{Descricao}','{TipoQuartos}','{Ativo}','{QtdCamaSimples}','{QtdCamaDupla}')");
+            string query = string.Format($"INSERT INTO TipoQuarto (Capacidade,Descricao,TipoQuarto,Ativo,QdtCamaSimples,QdtCamaDupla) VALUES ('{Capacidade}','{Descricao}','{TipoQuartos}','{Ativo}','{QtdCamaSimples}','{QdtCamaDupla}')");
             query += "; SELECT SCOPE_IDENTITY()";
             ConexaoSQL cn = new ConexaoSQL(query);
 
@@ -83,7 +83,7 @@ namespace InovaTechSquadHotel.Classes
                         TipoQuartos = cn.dr[3].ToString(),
                         Ativo = Convert.ToBoolean(cn.dr[4]),
                         QtdCamaSimples = Convert.ToInt32(cn.dr[5]),
-                        QtdCamaDupla = Convert.ToInt32(cn.dr[6]),
+                        QdtCamaDupla = Convert.ToInt32(cn.dr[6]),
                     });
                 }
                 return tipoQuartos;
@@ -116,7 +116,7 @@ namespace InovaTechSquadHotel.Classes
         }
         public void AlterarTipoQuarto()
         {
-            string query = string.Format($"UPDATE TipoQuarto SET Capacidade = '{Capacidade}',Descricao = '{Descricao}',Ativo = '{Ativo}',QdtCamaSimples = '{QtdCamaSimples}',QtdCamaDupla = '{QtdCamaDupla}'");
+            string query = string.Format($"UPDATE TipoQuarto SET Capacidade = '{Capacidade}',Descricao = '{Descricao}',Ativo = '{Ativo}',QdtCamaSimples = '{QtdCamaSimples}',QdtCamaDupla = '{QdtCamaDupla}'");
             ConexaoSQL cn = new ConexaoSQL(query);
 
             try

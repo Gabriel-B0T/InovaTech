@@ -84,8 +84,6 @@
             // CbxAtivo
             // 
             this.CbxAtivo.AutoSize = true;
-            this.CbxAtivo.Checked = true;
-            this.CbxAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CbxAtivo.Location = new System.Drawing.Point(506, 19);
             this.CbxAtivo.Name = "CbxAtivo";
             this.CbxAtivo.Size = new System.Drawing.Size(50, 17);

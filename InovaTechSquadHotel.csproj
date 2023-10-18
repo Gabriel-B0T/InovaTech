@@ -127,6 +127,7 @@
     <EmbeddedResource Include="Telas\TelaTipoQuarto.resx">
       <DependentUpon>TelaTipoQuarto.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\InovaTechSquadHotel.Classes.TipoQuarto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

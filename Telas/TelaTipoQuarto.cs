@@ -79,7 +79,7 @@ namespace InovaTechSquadHotel.Telas
 
             foreach (TipoQuarto tipoQuarto in tipoQuartos ?? _tipoQuartos)
             {
-                DgvRegistro.Rows.Add(tipoQuarto.Id, tipoQuarto.Capacidade, tipoQuarto.Descricao, tipoQuarto.TipoQuartos,tipoQuarto.Ativo, tipoQuarto.QtdCamaSimples, tipoQuarto.QtdCamaDupla);
+                DgvRegistro.Rows.Add(tipoQuarto.Id, tipoQuarto.Capacidade, tipoQuarto.Descricao, tipoQuarto.TipoQuartos,tipoQuarto.Ativo, tipoQuarto.QtdCamaSimples, tipoQuarto.QdtCamaDupla);
             }
         }
         private void LimparCampos()
@@ -137,7 +137,7 @@ namespace InovaTechSquadHotel.Telas
                 _TipoQuartosSelecionado.TipoQuartos = TxtTipoQuarto.Text;
                 _TipoQuartosSelecionado.Ativo = Convert.ToBoolean(CbxAtivo.Checked);
                 _TipoQuartosSelecionado.QtdCamaSimples = Convert.ToInt32(TxtQdtCamaSimples.Text);
-                _TipoQuartosSelecionado.QtdCamaDupla = Convert.ToInt32(TxtQtdCamaDupla.Text);
+                _TipoQuartosSelecionado.QdtCamaDupla = Convert.ToInt32(TxtQtdCamaDupla.Text);
 
                 _TipoQuartosSelecionado.AlterarTipoQuarto();
                 CarregarDgv();
@@ -191,7 +191,7 @@ namespace InovaTechSquadHotel.Telas
                 TxtTipoQuarto.Text = _TipoQuartosSelecionado.TipoQuartos;
                 CbxAtivo.Text = _TipoQuartosSelecionado.Ativo.ToString();
                 TxtQdtCamaSimples.Text = _TipoQuartosSelecionado.QtdCamaSimples.ToString();
-                TxtQtdCamaDupla.Text = _TipoQuartosSelecionado.QtdCamaDupla.ToString();
+                TxtQtdCamaDupla.Text = _TipoQuartosSelecionado.QdtCamaDupla.ToString();
 
                 BtnCadastrar.Enabled = false;
                 BtnAlterar.Enabled = true;

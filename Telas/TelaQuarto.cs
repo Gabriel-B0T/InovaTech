@@ -114,6 +114,11 @@ namespace InovaTechSquadHotel.Telas
                 ConfigurarDgv();
                 CarregarDgv();
                 LimparCampos();
+
+                List<TipoQuarto> tipoQuartos = new List<TipoQuarto>();
+                CbxTipoQuarto.DataSource = tipoQuartos;
+                CbxTipoQuarto.DisplayMember = "Descricao";
+                CbxTipoQuarto.ValueMember = "Id";
             }
             catch (Exception ex)
             {

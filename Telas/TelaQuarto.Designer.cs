@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CbxTipoQuarto = new System.Windows.Forms.ComboBox();
             this.LblIdQuarto = new System.Windows.Forms.Label();
@@ -43,8 +44,10 @@
             this.TxtNAndar = new System.Windows.Forms.TextBox();
             this.TxtNquarto = new System.Windows.Forms.TextBox();
             this.DgvRegistro = new System.Windows.Forms.DataGridView();
+            this.tipoQuartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoQuartoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,6 +73,8 @@
             // 
             // CbxTipoQuarto
             // 
+            this.CbxTipoQuarto.DataSource = this.tipoQuartoBindingSource;
+            this.CbxTipoQuarto.DisplayMember = "Descricao";
             this.CbxTipoQuarto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxTipoQuarto.FormattingEnabled = true;
             this.CbxTipoQuarto.Location = new System.Drawing.Point(408, 101);
@@ -203,6 +208,10 @@
             this.DgvRegistro.TabIndex = 7;
             this.DgvRegistro.SelectionChanged += new System.EventHandler(this.DgvRegistro_SelectionChanged);
             // 
+            // tipoQuartoBindingSource
+            // 
+            this.tipoQuartoBindingSource.DataSource = typeof(InovaTechSquadHotel.Classes.TipoQuarto);
+            // 
             // TelaQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,6 +225,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoQuartoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,5 +247,6 @@
         private System.Windows.Forms.Button BtnCadastrar;
         private System.Windows.Forms.Label LblIdQuarto;
         private System.Windows.Forms.ComboBox CbxTipoQuarto;
+        private System.Windows.Forms.BindingSource tipoQuartoBindingSource;
     }
 }
