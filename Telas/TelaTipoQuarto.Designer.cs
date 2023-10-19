@@ -47,9 +47,9 @@
             this.LblInfoTipoDeQuarto = new System.Windows.Forms.Label();
             this.TxtCapacidade = new System.Windows.Forms.TextBox();
             this.LblInfoCapacidade = new System.Windows.Forms.Label();
-            this.DgvRegistro = new System.Windows.Forms.DataGridView();
+            this.DgvRegistroTipoQuarto = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRegistroTipoQuarto)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -244,38 +244,38 @@
             this.LblInfoCapacidade.TabIndex = 0;
             this.LblInfoCapacidade.Text = "Capacidade";
             // 
-            // DgvRegistro
+            // DgvRegistroTipoQuarto
             // 
-            this.DgvRegistro.AllowUserToAddRows = false;
-            this.DgvRegistro.AllowUserToDeleteRows = false;
-            this.DgvRegistro.AllowUserToResizeRows = false;
-            this.DgvRegistro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DgvRegistroTipoQuarto.AllowUserToAddRows = false;
+            this.DgvRegistroTipoQuarto.AllowUserToDeleteRows = false;
+            this.DgvRegistroTipoQuarto.AllowUserToResizeRows = false;
+            this.DgvRegistroTipoQuarto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgvRegistro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvRegistro.Location = new System.Drawing.Point(12, 271);
-            this.DgvRegistro.MultiSelect = false;
-            this.DgvRegistro.Name = "DgvRegistro";
-            this.DgvRegistro.ReadOnly = true;
-            this.DgvRegistro.RowHeadersVisible = false;
-            this.DgvRegistro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvRegistro.Size = new System.Drawing.Size(776, 167);
-            this.DgvRegistro.TabIndex = 8;
-            this.DgvRegistro.SelectionChanged += new System.EventHandler(this.DgvRegistro_SelectionChanged);
+            this.DgvRegistroTipoQuarto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvRegistroTipoQuarto.Location = new System.Drawing.Point(12, 271);
+            this.DgvRegistroTipoQuarto.MultiSelect = false;
+            this.DgvRegistroTipoQuarto.Name = "DgvRegistroTipoQuarto";
+            this.DgvRegistroTipoQuarto.ReadOnly = true;
+            this.DgvRegistroTipoQuarto.RowHeadersVisible = false;
+            this.DgvRegistroTipoQuarto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvRegistroTipoQuarto.Size = new System.Drawing.Size(776, 167);
+            this.DgvRegistroTipoQuarto.TabIndex = 8;
+            this.DgvRegistroTipoQuarto.SelectionChanged += new System.EventHandler(this.DgvRegistroTipoQuarto_SelectionChanged);
             // 
             // TelaTipoQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.DgvRegistro);
+            this.Controls.Add(this.DgvRegistroTipoQuarto);
             this.Controls.Add(this.groupBox1);
             this.Name = "TelaTipoQuarto";
             this.Text = "TelaTipoQuarto";
             this.Load += new System.EventHandler(this.TelaTipoQuarto_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRegistroTipoQuarto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,7 +289,7 @@
         private System.Windows.Forms.Label LblInfoTipoDeQuarto;
         private System.Windows.Forms.TextBox TxtCapacidade;
         private System.Windows.Forms.Label LblInfoCapacidade;
-        private System.Windows.Forms.DataGridView DgvRegistro;
+        private System.Windows.Forms.DataGridView DgvRegistroTipoQuarto;
         private System.Windows.Forms.Label LblInfoDescricao;
         private System.Windows.Forms.TextBox TxtQtdCamaDupla;
         private System.Windows.Forms.Label LblInfoCamaDupla;

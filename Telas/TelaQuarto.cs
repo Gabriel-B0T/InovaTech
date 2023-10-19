@@ -36,7 +36,7 @@ namespace InovaTechSquadHotel.Telas
         {
             //Criação de colunas no DvgRegistro
             DgvRegistro.Columns.Add("Id", " Id");
-            DgvRegistro.Columns.Add("TipoQuartoId", "Tipo de quarto");
+            DgvRegistro.Columns.Add("TipoQuartoId", "Id Tipo de quarto");
             DgvRegistro.Columns.Add("NumQuarto", "Numero do quarto");
             DgvRegistro.Columns.Add("NumAndar", "Numero do andar");
             DgvRegistro.Columns.Add("ValorDiaria", "Valor da diaria");
@@ -75,13 +75,13 @@ namespace InovaTechSquadHotel.Telas
 
             foreach (Quarto quarto in quartos ?? _quartos)
             {
-                DgvRegistro.Rows.Add(quarto.Id, quarto.NumQuarto, quarto.NumAndar, quarto.ValorDiaria);
+                DgvRegistro.Rows.Add(quarto.Id,quarto.TipoQuartoId, quarto.NumQuarto, quarto.NumAndar, quarto.ValorDiaria);
             }
         }
 
         private void LimparCampos()
         {
-            LblIdQuarto.Text = string.Empty;
+            LblIdTipoQuarto.Text = string.Empty;
             TxtNquarto.Clear();
             TxtNAndar.Clear();
             TxtValorDiaria.Clear();
@@ -95,16 +95,15 @@ namespace InovaTechSquadHotel.Telas
         {
             try
             {
-                Quarto quarto = new Quarto(0,(int)CbxTipoQuarto.SelectedValue ,Convert.ToInt32(TxtNquarto.Text), Convert.ToInt32(TxtNAndar.Text), Convert.ToInt32(TxtValorDiaria.Text));
+                Quarto quarto = new Quarto(0, (int)CbxTipoQuarto.SelectedValue, Convert.ToInt32(TxtNquarto.Text), Convert.ToInt32(TxtNAndar.Text), Convert.ToInt32(TxtValorDiaria.Text));
                 quarto.CadastrarQuarto(_quartos);
-                //CarregarDgv();
+                CarregarDgv();
                 LimparCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void TelaQuartos_Load(object sender, EventArgs e)
@@ -115,10 +114,10 @@ namespace InovaTechSquadHotel.Telas
                 CarregarDgv();
                 LimparCampos();
 
-                List<TipoQuarto> tipoQuartos = new List<TipoQuarto>();
+                List<TipoQuarto> tipoQuartos = TipoQuarto.BuscarTipoQuarto(); // Use o método BuscarTipoQuarto da classe TipoQuarto
                 CbxTipoQuarto.DataSource = tipoQuartos;
-                CbxTipoQuarto.DisplayMember = "Descricao";
-                CbxTipoQuarto.ValueMember = "Id";
+                CbxTipoQuarto.DisplayMember = "Descricao"; // Exibe a descrição do tipoQuarto
+                CbxTipoQuarto.ValueMember = "Id"; // Armazena o ID do tipoQuarto
             }
             catch (Exception ex)
             {
@@ -154,9 +153,10 @@ namespace InovaTechSquadHotel.Telas
             {
                 _quartoSelecionado = _quartos.Find(a => a.Id == (int)DgvRegistro.SelectedRows[0].Cells[0].Value);
                 LblIdQuarto.Text = _quartoSelecionado.Id.ToString();
+                LblIdTipoQuarto.Text = _quartoSelecionado.Id.ToString();               
                 TxtNquarto.Text = _quartoSelecionado.NumAndar.ToString();
                 TxtNAndar.Text = _quartoSelecionado.NumAndar.ToString();
-                TxtValorDiaria.Text = _quartoSelecionado.ValorDiaria.ToString();                
+                TxtValorDiaria.Text = _quartoSelecionado.ValorDiaria.ToString();
 
                 BtnCadastrar.Enabled = false;
                 BtnAlterar.Enabled = true;
@@ -196,5 +196,6 @@ namespace InovaTechSquadHotel.Telas
                 throw;
             }
         }
+               
     }
 }

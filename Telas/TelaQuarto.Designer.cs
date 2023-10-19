@@ -31,7 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CbxTipoQuarto = new System.Windows.Forms.ComboBox();
-            this.LblIdQuarto = new System.Windows.Forms.Label();
+            this.tipoQuartoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.LblIdTipoQuarto = new System.Windows.Forms.Label();
             this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnAlterar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
@@ -43,17 +44,23 @@
             this.TxtValorDiaria = new System.Windows.Forms.TextBox();
             this.TxtNAndar = new System.Windows.Forms.TextBox();
             this.TxtNquarto = new System.Windows.Forms.TextBox();
-            this.DgvRegistro = new System.Windows.Forms.DataGridView();
             this.tipoQuartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DgvRegistro = new System.Windows.Forms.DataGridView();
+            this.DadosTipoQuarto = new System.Windows.Forms.Label();
+            this.tipoQuartoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.LblIdQuarto = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoQuartoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoQuartoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoQuartoBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.CbxTipoQuarto);
             this.groupBox1.Controls.Add(this.LblIdQuarto);
+            this.groupBox1.Controls.Add(this.CbxTipoQuarto);
+            this.groupBox1.Controls.Add(this.LblIdTipoQuarto);
             this.groupBox1.Controls.Add(this.BtnNovo);
             this.groupBox1.Controls.Add(this.BtnAlterar);
             this.groupBox1.Controls.Add(this.BtnExcluir);
@@ -67,29 +74,33 @@
             this.groupBox1.Controls.Add(this.TxtNquarto);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(559, 201);
+            this.groupBox1.Size = new System.Drawing.Size(653, 201);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // CbxTipoQuarto
             // 
-            this.CbxTipoQuarto.DataSource = this.tipoQuartoBindingSource;
+            this.CbxTipoQuarto.DataSource = this.tipoQuartoBindingSource1;
             this.CbxTipoQuarto.DisplayMember = "Descricao";
             this.CbxTipoQuarto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxTipoQuarto.FormattingEnabled = true;
             this.CbxTipoQuarto.Location = new System.Drawing.Point(408, 101);
             this.CbxTipoQuarto.Name = "CbxTipoQuarto";
-            this.CbxTipoQuarto.Size = new System.Drawing.Size(121, 21);
+            this.CbxTipoQuarto.Size = new System.Drawing.Size(239, 21);
             this.CbxTipoQuarto.TabIndex = 12;
             // 
-            // LblIdQuarto
+            // tipoQuartoBindingSource1
             // 
-            this.LblIdQuarto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.LblIdQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblIdQuarto.Location = new System.Drawing.Point(30, 101);
-            this.LblIdQuarto.Name = "LblIdQuarto";
-            this.LblIdQuarto.Size = new System.Drawing.Size(100, 24);
-            this.LblIdQuarto.TabIndex = 11;
+            this.tipoQuartoBindingSource1.DataSource = typeof(InovaTechSquadHotel.Classes.TipoQuarto);
+            // 
+            // LblIdTipoQuarto
+            // 
+            this.LblIdTipoQuarto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LblIdTipoQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIdTipoQuarto.Location = new System.Drawing.Point(30, 95);
+            this.LblIdTipoQuarto.Name = "LblIdTipoQuarto";
+            this.LblIdTipoQuarto.Size = new System.Drawing.Size(100, 24);
+            this.LblIdTipoQuarto.TabIndex = 11;
             // 
             // BtnNovo
             // 
@@ -192,6 +203,10 @@
             this.TxtNquarto.Size = new System.Drawing.Size(100, 20);
             this.TxtNquarto.TabIndex = 0;
             // 
+            // tipoQuartoBindingSource
+            // 
+            this.tipoQuartoBindingSource.DataSource = typeof(InovaTechSquadHotel.Classes.TipoQuarto);
+            // 
             // DgvRegistro
             // 
             this.DgvRegistro.AllowUserToAddRows = false;
@@ -208,15 +223,33 @@
             this.DgvRegistro.TabIndex = 7;
             this.DgvRegistro.SelectionChanged += new System.EventHandler(this.DgvRegistro_SelectionChanged);
             // 
-            // tipoQuartoBindingSource
+            // DadosTipoQuarto
             // 
-            this.tipoQuartoBindingSource.DataSource = typeof(InovaTechSquadHotel.Classes.TipoQuarto);
+            this.DadosTipoQuarto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DadosTipoQuarto.Location = new System.Drawing.Point(577, 219);
+            this.DadosTipoQuarto.Name = "DadosTipoQuarto";
+            this.DadosTipoQuarto.Size = new System.Drawing.Size(556, 219);
+            this.DadosTipoQuarto.TabIndex = 8;
+            // 
+            // tipoQuartoBindingSource2
+            // 
+            this.tipoQuartoBindingSource2.DataSource = typeof(InovaTechSquadHotel.Classes.TipoQuarto);
+            // 
+            // LblIdQuarto
+            // 
+            this.LblIdQuarto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.LblIdQuarto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblIdQuarto.Location = new System.Drawing.Point(30, 128);
+            this.LblIdQuarto.Name = "LblIdQuarto";
+            this.LblIdQuarto.Size = new System.Drawing.Size(100, 24);
+            this.LblIdQuarto.TabIndex = 13;
             // 
             // TelaQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 450);
+            this.Controls.Add(this.DadosTipoQuarto);
             this.Controls.Add(this.DgvRegistro);
             this.Controls.Add(this.groupBox1);
             this.Name = "TelaQuarto";
@@ -224,8 +257,10 @@
             this.Load += new System.EventHandler(this.TelaQuartos_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoQuartoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoQuartoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRegistro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoQuartoBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -245,8 +280,12 @@
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnFechar;
         private System.Windows.Forms.Button BtnCadastrar;
-        private System.Windows.Forms.Label LblIdQuarto;
+        private System.Windows.Forms.Label LblIdTipoQuarto;
         private System.Windows.Forms.ComboBox CbxTipoQuarto;
         private System.Windows.Forms.BindingSource tipoQuartoBindingSource;
+        private System.Windows.Forms.BindingSource tipoQuartoBindingSource1;
+        private System.Windows.Forms.Label DadosTipoQuarto;
+        private System.Windows.Forms.BindingSource tipoQuartoBindingSource2;
+        private System.Windows.Forms.Label LblIdQuarto;
     }
 }

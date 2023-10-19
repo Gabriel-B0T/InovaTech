@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace InovaTechSquadHotel.Classes
 {
@@ -116,7 +117,7 @@ namespace InovaTechSquadHotel.Classes
         }
         public void AlterarTipoQuarto()
         {
-            string query = string.Format($"UPDATE TipoQuarto SET Capacidade = '{Capacidade}',Descricao = '{Descricao}',Ativo = '{Ativo}',QdtCamaSimples = '{QtdCamaSimples}',QdtCamaDupla = '{QdtCamaDupla}'");
+            string query = string.Format($"UPDATE TipoQuarto SET Capacidade = '{Capacidade}',Descricao = '{Descricao}',Ativo = '{Ativo}',QdtCamaSimples = '{QtdCamaSimples}',QdtCamaDupla = '{QdtCamaDupla}'WHERE Id = '{Id}'");
             ConexaoSQL cn = new ConexaoSQL(query);
 
             try
@@ -134,7 +135,6 @@ namespace InovaTechSquadHotel.Classes
             }
         }
 
-        
         #endregion
     }
 }
