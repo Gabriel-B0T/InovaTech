@@ -73,9 +73,10 @@ namespace InovaTechSquadHotel.Classes
                     quartos.Add(new Quarto()
                     {
                         Id = Convert.ToInt32(cn.dr[0]),
-                        NumQuarto = Convert.ToInt32(cn.dr[1]),
-                        NumAndar = Convert.ToInt32(cn.dr[2]),
-                        ValorDiaria = Convert.ToDecimal(cn.dr[3]),
+                        TipoQuartoId = Convert.ToInt32(cn.dr[1]),
+                        NumQuarto = Convert.ToInt32(cn.dr[2]),
+                        NumAndar = Convert.ToInt32(cn.dr[3]),
+                        ValorDiaria = Convert.ToDecimal(cn.dr[4]),
                     });
                 }
                 return quartos;
@@ -108,7 +109,7 @@ namespace InovaTechSquadHotel.Classes
         }
         public void AlterarQuarto()
         {
-            string query = string.Format($"UPDATE Quarto SET NumQuarto = '{NumQuarto}', NumAndar = '{NumAndar}', ValorDiaria = '{ValorDiaria}'");
+            string query = string.Format($"UPDATE Quarto SET NumQuarto = '{NumQuarto}', NumAndar = '{NumAndar}', ValorDiaria = '{ValorDiaria}' where Id = '{Id}'");
             ConexaoSQL cn = new ConexaoSQL(query);
 
             try

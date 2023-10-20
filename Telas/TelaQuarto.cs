@@ -153,8 +153,8 @@ namespace InovaTechSquadHotel.Telas
             {
                 _quartoSelecionado = _quartos.Find(a => a.Id == (int)DgvRegistro.SelectedRows[0].Cells[0].Value);
                 LblIdQuarto.Text = _quartoSelecionado.Id.ToString();
-                LblIdTipoQuarto.Text = _quartoSelecionado.Id.ToString();               
-                TxtNquarto.Text = _quartoSelecionado.NumAndar.ToString();
+                LblIdTipoQuarto.Text = _quartoSelecionado.TipoQuartoId.ToString();               
+                TxtNquarto.Text = _quartoSelecionado.NumQuarto.ToString();
                 TxtNAndar.Text = _quartoSelecionado.NumAndar.ToString();
                 TxtValorDiaria.Text = _quartoSelecionado.ValorDiaria.ToString();
 
